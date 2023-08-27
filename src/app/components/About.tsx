@@ -5,7 +5,7 @@ const About = () => {
     <div className="w-[70%] mt-56 grid grid-cols-2 items-center gap-14">
       <div className="flex flex-col gap-10">
         <h1 className="text-[2rem] font-bold">
-          What if the future of banking wasn't a bank?
+          What if the future of banking wasn’t a bank?
         </h1>
         <p>
           Technology has reimagined our world, and now it’s finally time for
@@ -16,7 +16,11 @@ const About = () => {
           Learn more <AiOutlineArrowRight />
         </button>
       </div>
-      <img className="w-full aspect-ratio" src="future.webp"></img>
+      <img
+        className="w-full aspect-ratio"
+        src="future.webp"
+        alt="about_img"
+      ></img>
     </div>
   );
 };

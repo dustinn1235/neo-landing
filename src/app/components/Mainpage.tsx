@@ -97,7 +97,7 @@ const Mainpage = () => {
               className="w-3/4 font-light leading-normal"
               variants={word}
             >
-              We're reinventing how Canadians spend, save, and grow their
+              We’re reinventing how Canadians spend, save, and grow their
               money-all together, in one placce. Join us as we set the new
               standard.
             </motion.p>

@@ -37,7 +37,7 @@ const Products = () => {
   return (
     <div className="w-[75%] flex flex-col items-center justify-center mt-16 gap-16">
       <h1 className="w-[64%] text-[1.7rem] text-center">
-        Products that talk to each other and work seamlessly together - that's
+        Products that talk to each other and work seamlessly together - that’s
         Neo
       </h1>
 
