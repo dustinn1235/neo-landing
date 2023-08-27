@@ -1,9 +1,4 @@
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const Slogan = () => {
@@ -12,10 +7,7 @@ const Slogan = () => {
     target: ref,
     offset: ["start end", "end start"],
   });
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("Page scroll: ", latest);
-  });
-  const translateY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+  const translateY = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
 
   return (
     <div

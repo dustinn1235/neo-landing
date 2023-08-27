@@ -1,8 +1,20 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const About = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const translateY = useTransform(scrollYProgress, [0, 1], ["35%", "-35%"]);
+
   return (
-    <div className="w-[70%] mt-56 grid grid-cols-2 items-center gap-14">
+    <div
+      className="w-[70%] mt-56 grid grid-cols-2 items-center gap-14"
+      ref={ref}
+    >
       <div className="flex flex-col gap-10">
         <h1 className="text-[2rem] font-bold">
           What if the future of banking wasn’t a bank?
@@ -16,11 +28,12 @@ const About = () => {
           Learn more <AiOutlineArrowRight />
         </button>
       </div>
-      <img
+      <motion.img
         className="w-full aspect-ratio"
         src="future.webp"
         alt="about_img"
-      ></img>
+        style={{ translateY }}
+      ></motion.img>
     </div>
   );
 };
