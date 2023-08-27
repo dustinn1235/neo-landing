@@ -1,10 +1,32 @@
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { useRef } from "react";
+
 const Slogan = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log("Page scroll: ", latest);
+  });
+  const translateY = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+
   return (
-    <div className="relative mt-56 min-w-[100vw] min-h-[30rem] flex flex-col items-center justify-center gap-8">
-      <img
+    <div
+      className="overflow-hidden relative mt-56 min-w-[100vw] min-h-[100vh] flex flex-col items-center justify-center gap-8"
+      ref={ref}
+    >
+      <motion.img
         src="joinnow.jpg"
         className="w-full h-full object-cover absolute opacity-30 object-center"
-      ></img>
+        style={{ translateY }}
+      ></motion.img>
 
       <p className="text-3xl">
         Start getting the financial experience you deserve

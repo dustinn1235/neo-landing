@@ -76,9 +76,9 @@ const Mainpage = () => {
 
   return (
     <>
-      <div className="w-[68%] flex min-h-screen items-center">
+      <div className="w-[68%] grid grid-cols-[1.8fr,1fr] min-h-screen items-center">
         <motion.div
-          className="flex flex-col gap-6 w-[65%] pr-20"
+          className="flex flex-col gap-6 pr-20"
           variants={banner}
           initial="initial"
           animate="animate"
@@ -118,7 +118,7 @@ const Mainpage = () => {
           variants={card}
           initial="initial"
           animate="animate"
-          className="h-[50%] flex-1 relative flex justify-center items-center"
+          className="h-[50%] relative flex justify-center items-center"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           ref={ref}
