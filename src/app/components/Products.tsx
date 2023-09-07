@@ -42,7 +42,7 @@ const Products = () => {
       </h1>
 
       <div className="w-full h-[40rem] relative flex items-center">
-        <div className="w-[52%] h-full absolute bg-[#989898] right-0 rounded-xl">
+        <div className="w-[52%] h-full absolute bg-[#989898] right-0 rounded-xl overflow-hidden">
           {products.map((product, i) => (
             <motion.img
               src={products[active].imgURL}
