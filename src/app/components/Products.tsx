@@ -76,7 +76,7 @@ const Products = () => {
               >
                 <p className="font-light">{product.description}</p>
                 <button className="mt-6 font-semibold w-fit px-4 py-2 bg-[#414141] rounded-full flex items-center gap-2 group justify-center hover:bg-[#f8faf9]">
-                  <p className="mix-blend-exclusion">Learn more</p>
+                  <p className="mix-blend-exclusion">Learn More</p>
                   <AiOutlineArrowRight className="w-fit max-w-0 group-hover:max-w-[2rem] transition-all duration-300 mix-blend-exclusion" />
                 </button>
               </motion.div>

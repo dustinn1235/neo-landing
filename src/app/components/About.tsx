@@ -8,7 +8,7 @@ const About = () => {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const translateY = useTransform(scrollYProgress, [0, 1], ["35%", "-35%"]);
+  const translateY = useTransform(scrollYProgress, [0, 1], ["50%", "-50%"]);
 
   return (
     <div
@@ -24,7 +24,7 @@ const About = () => {
           technology to reimagine our financial world too. Neo is focused on
           providing the financial services experience Canadians deserve.
         </p>
-        <button className="self-start text-[#909090] text-lg font-bold flex items-center gap-1">
+        <button className="self-start text-[#909090] text-lg font-bold flex items-center gap-1 hover:underline underline-offset-4 hover:gap-2 transition-all">
           Learn more <AiOutlineArrowRight />
         </button>
       </div>

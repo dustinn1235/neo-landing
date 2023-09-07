@@ -108,7 +108,7 @@ const Mainpage = () => {
               variants={word}
               className="mt-4 font-bold w-fit px-6 py-4 bg-[#414141] rounded-full flex items-center gap-2 group justify-center hover:bg-[#f8faf9]"
             >
-              <p className="mix-blend-exclusion">Join now</p>
+              <p className="mix-blend-exclusion">Join Now</p>
               <AiOutlineArrowRight className="w-fit max-w-0 group-hover:max-w-[2rem] transition-all duration-300 mix-blend-exclusion" />
             </motion.button>
           </div>
