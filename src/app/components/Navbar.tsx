@@ -1,17 +1,55 @@
-import { motion } from "framer-motion";
+import {
+  motion,
+  useAnimationControls,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
+import { useEffect, useState } from "react";
+
+const variants = {
+  initial: {
+    y: -400,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.3,
+    },
+  },
+  first: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1,
+      delay: 1.1,
+    },
+  },
+  animate: {
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.3,
+    },
+  },
+};
 
 const Navbar = () => {
+  const { scrollY } = useScroll();
+  const [animateState, setAnimateState] = useState("first");
+
+  useMotionValueEvent(scrollY, "change", (v) => {
+    if (v - scrollY.getPrevious() < 0) {
+      setAnimateState("animate");
+    } else {
+      setAnimateState("initial");
+    }
+  });
+
   return (
     <>
       <motion.div
         className="w-full h-[5rem] flex font-semibold items-center pt-4 fixed left-0 top-0 px-20 bg-black z-20"
-        initial={{ y: -400 }}
-        animate={{ y: 0 }}
-        transition={{
-          ease: [0.6, 0.01, -0.05, 0.95],
-          duration: 1,
-          delay: 1.1,
-        }}
+        variants={variants}
+        initial="initial"
+        animate={animateState}
       >
         <img src="logo.svg" className="w-auto h-fit object-contain mr-16"></img>
 
