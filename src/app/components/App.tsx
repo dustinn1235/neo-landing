@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div
       className="font-Poppins w-full min-h-full absolute bg-black px-20 text-[#f8faf9]"
-      style={{ overflowY: scrollable ? "auto" : "hidden" }}
+      style={{ overflowY: scrollable ? "visible" : "hidden" }}
     >
       <Loading setScrollable={setScrollable} />
       {scrollable && (
