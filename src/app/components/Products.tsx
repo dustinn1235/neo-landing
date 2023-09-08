@@ -1,6 +1,11 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { products } from "../utils/products";
 
 const collapseVariants = {
@@ -33,15 +38,21 @@ const imageVariants = {
 
 const Products = () => {
   const [active, setActive] = useState(0);
+  const ref = useRef(null);
+  // const { scrollYProgress } = useScroll({ target: ref });
+  // useMotionValueEvent(scrollYProgress, "change", (v) => {
+  //   const index = Math.floor(v / 0.255);
+  //   if (active !== index) setActive(index);
+  // });
 
   return (
-    <div className="w-[75%] flex flex-col items-center justify-center mt-16 gap-16">
+    <div className="w-[75%] flex flex-col items-center mt-16 gap-16" ref={ref}>
       <h1 className="w-[64%] text-[1.7rem] text-center">
         Products that talk to each other and work seamlessly together - that’s
         Neo
       </h1>
 
-      <div className="w-full h-[40rem] relative flex items-center">
+      <div className="w-full h-[40rem] flex items-center sticky top-[8%]">
         <div className="w-[52%] h-full absolute bg-[#989898] right-0 rounded-xl overflow-hidden">
           {products.map((product, i) => (
             <motion.img
