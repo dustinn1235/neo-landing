@@ -1,3 +1,5 @@
+import CountUp from "./CountUp";
+
 const Store = () => {
   return (
     <div className="mt-48 w-[70%]">
@@ -31,15 +33,15 @@ const Store = () => {
 
           <div className="grid grid-cols-3 gap-4 text-xl">
             <div className="flex flex-col items-center">
-              <p>4.8 &#9733;</p>
+              <CountUp end={4.8} decimals={1} suffix=" &#9733;" />
               <p>On the app store</p>
             </div>
             <div className="flex flex-col items-center">
-              <p>750+</p>
+              <CountUp end={750} suffix="+" />
               <p>Employees</p>
             </div>
             <div className="flex flex-col items-center">
-              <p>$299</p>
+              <CountUp end={299} prefix="$" />
               <p>Million raised</p>
             </div>
           </div>
