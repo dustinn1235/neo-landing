@@ -1,10 +1,6 @@
-import {
-  motion,
-  useAnimationControls,
-  useMotionValueEvent,
-  useScroll,
-} from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const variants = {
   initial: {
@@ -46,14 +42,18 @@ const Navbar = () => {
   return (
     <>
       <motion.div
-        className="w-full h-[5rem] flex font-semibold items-center pt-4 fixed left-0 top-0 px-20 bg-black z-20"
+        className="w-full h-[5rem] flex font-semibold items-center pt-4 fixed left-0 top-0 px-8 bg-black z-20"
         variants={variants}
         initial="initial"
         animate={animateState}
       >
         <img src="logo.svg" className="w-auto h-fit object-contain mr-16"></img>
 
-        <div className="flex gap-10">
+        <div className="ml-auto text-2xl lg:hidden">
+          <GiHamburgerMenu />
+        </div>
+
+        <div className="max-lg:hidden flex gap-10">
           <span>Products</span>
           <span>Features</span>
           <span>Learn</span>
@@ -61,7 +61,7 @@ const Navbar = () => {
           <span>Support</span>
         </div>
 
-        <div className="ml-auto flex gap-6 items-center">
+        <div className="max-lg:hidden ml-auto flex gap-6 items-center">
           <button className="h-fit">Log In</button>
           <button className="h-fit rounded-lg bg-white text-black px-6 py-2">
             Sign Up
