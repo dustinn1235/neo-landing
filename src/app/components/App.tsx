@@ -27,10 +27,15 @@ const App = () => {
       requestAnimationFrame(raf);
 
       if (!ref.current) return;
+
+      // debounce timer
+      let timer: NodeJS.Timeout;
       const resizeObserver = new ResizeObserver(() => {
         // Do what you want to do when the size of the element changes
-        console.log(ref.current?.offsetHeight);
-        lenis.resize();
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          lenis.resize();
+        }, 100);
       });
       resizeObserver.observe(ref.current);
       return () => resizeObserver.disconnect(); // clean up
