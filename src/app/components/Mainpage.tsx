@@ -76,62 +76,64 @@ const Mainpage = () => {
 
   return (
     <>
-      <div className="w-[68%] grid grid-cols-[1.8fr,1fr] min-h-screen items-center">
-        <motion.div
-          className="flex flex-col gap-6 pr-20"
-          variants={banner}
-          initial="initial"
-          animate="animate"
-        >
-          <div className="overflow-hidden w-full">
-            <motion.h1
-              className="text-[3.4rem] font-bold leading-tight"
-              variants={word}
-            >
-              THE MODERN WAY TO MONEY
-            </motion.h1>
-          </div>
+      <div className="w-[68%] min-h-screen flex justify-center items-center">
+        <div className="grid grid-cols-[1.8fr,1fr] items-center">
+          <motion.div
+            className="flex flex-col gap-6 pr-20"
+            variants={banner}
+            initial="initial"
+            animate="animate"
+          >
+            <div className="overflow-hidden w-full">
+              <motion.h1
+                className="text-[3.4rem] font-bold leading-tight"
+                variants={word}
+              >
+                THE MODERN WAY TO MONEY
+              </motion.h1>
+            </div>
 
-          <div className="overflow-hidden">
-            <motion.p
-              className="w-3/4 font-light leading-normal"
-              variants={word}
-            >
-              We’re reinventing how Canadians spend, save, and grow their
-              money-all together, in one placce. Join us as we set the new
-              standard.
-            </motion.p>
-          </div>
+            <div className="overflow-hidden">
+              <motion.p
+                className="w-3/4 font-light leading-normal"
+                variants={word}
+              >
+                We’re reinventing how Canadians spend, save, and grow their
+                money-all together, in one placce. Join us as we set the new
+                standard.
+              </motion.p>
+            </div>
 
-          <div className="overflow-hidden">
-            <motion.button
-              variants={word}
-              className="mt-4 font-bold w-fit px-6 py-4 bg-[#414141] rounded-full flex items-center gap-2 group justify-center hover:bg-[#f8faf9]"
-            >
-              <p className="mix-blend-exclusion">Join Now</p>
-              <AiOutlineArrowRight className="w-fit max-w-0 group-hover:max-w-[2rem] transition-all duration-300 mix-blend-exclusion" />
-            </motion.button>
-          </div>
-        </motion.div>
+            <div className="overflow-hidden">
+              <motion.button
+                variants={word}
+                className="mt-4 font-bold w-fit px-6 py-4 bg-[#414141] rounded-full flex items-center gap-2 group justify-center hover:bg-[#f8faf9]"
+              >
+                <p className="mix-blend-exclusion">Join Now</p>
+                <AiOutlineArrowRight className="w-fit max-w-0 group-hover:max-w-[2rem] transition-all duration-300 mix-blend-exclusion" />
+              </motion.button>
+            </div>
+          </motion.div>
 
-        <motion.div
-          variants={card}
-          initial="initial"
-          animate="animate"
-          className="h-[50%] relative flex justify-center items-center"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          ref={ref}
-        >
-          <img
-            src="neocard.png"
-            className="w-full h-full object-contain absolute transition-all z-10"
-            style={{
-              transform: mousePos,
-            }}
-          ></img>
-          <div className="h-full aspect-square absolute border-2 z-0 rounded-full"></div>
-        </motion.div>
+          <motion.div
+            variants={card}
+            initial="initial"
+            animate="animate"
+            className="w-full h-[108%] relative flex justify-center items-center"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            ref={ref}
+          >
+            <img
+              src="neocard.png"
+              className="w-full h-full object-contain absolute transition-all z-10"
+              style={{
+                transform: mousePos,
+              }}
+            ></img>
+            <div className="h-full aspect-square absolute border-2 z-0 rounded-full"></div>
+          </motion.div>
+        </div>
       </div>
     </>
   );

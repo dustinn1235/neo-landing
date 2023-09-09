@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import Navbar from "./Navbar";
 import Mainpage from "./Mainpage";
@@ -10,9 +10,21 @@ import Clients from "./Clients";
 import Store from "./Store";
 import Slogan from "./Slogan";
 import Footer from "./Footer";
+import Lenis from "@studio-freight/lenis";
 
 const App = () => {
   const [scrollable, setScrollable] = useState(false);
+
+  useEffect(() => {
+    if (scrollable) {
+      const lenis = new Lenis({ duration: 1.5 });
+      const raf = (time: any) => {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      };
+      requestAnimationFrame(raf);
+    }
+  }, [scrollable]);
 
   return (
     <div
