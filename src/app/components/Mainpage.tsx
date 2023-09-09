@@ -76,17 +76,17 @@ const Mainpage = () => {
 
   return (
     <>
-      <div className="w-[68%] min-h-screen flex justify-center items-center">
-        <div className="grid grid-cols-[1.8fr,1fr] items-center">
+      <div className="w-[100%] max-w-[58rem] pt-[7rem] md:pt-[9rem] lg:pt-[7rem] xl:pt-[4rem] 2xl:pt-0 min-h-screen flex justify-center items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-[1.8fr,1fr] items-center gap-20">
           <motion.div
-            className="flex flex-col gap-6 pr-20"
+            className="flex flex-col gap-6"
             variants={banner}
             initial="initial"
             animate="animate"
           >
             <div className="overflow-hidden w-full">
               <motion.h1
-                className="text-[3.4rem] font-bold leading-tight"
+                className="text-3xl md:text-[2.5rem] max-lg:text-center lg:text-[3.4rem] font-bold leading-tight"
                 variants={word}
               >
                 THE MODERN WAY TO MONEY
@@ -95,7 +95,7 @@ const Mainpage = () => {
 
             <div className="overflow-hidden">
               <motion.p
-                className="w-3/4 font-light leading-normal"
+                className="w-full max-w-[40rem] max-lg:text-center lg:w-3/4 font-light leading-normal"
                 variants={word}
               >
                 We’re reinventing how Canadians spend, save, and grow their
@@ -104,7 +104,7 @@ const Mainpage = () => {
               </motion.p>
             </div>
 
-            <div className="overflow-hidden">
+            <div className="overflow-hidden flex max-lg:justify-center">
               <motion.button
                 variants={word}
                 className="mt-4 font-bold w-fit px-6 py-4 bg-[#414141] rounded-full flex items-center gap-2 group justify-center hover:bg-[#f8faf9]"
@@ -119,7 +119,7 @@ const Mainpage = () => {
             variants={card}
             initial="initial"
             animate="animate"
-            className="w-full h-[108%] relative flex justify-center items-center"
+            className="w-[15rem] sm:w-[20rem] max-lg:aspect-square lg:h-[108%] relative flex justify-center items-center"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             ref={ref}

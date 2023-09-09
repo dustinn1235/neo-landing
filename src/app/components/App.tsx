@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <div
-      className="font-Poppins w-full min-h-full absolute bg-black px-20 text-[#f8faf9]"
+      className="font-Poppins w-full min-h-full absolute bg-black px-6 lg:px-10 xl:px-20 text-[#f8faf9]"
       style={{ overflowY: scrollable ? "visible" : "hidden" }}
       ref={ref}
     >
