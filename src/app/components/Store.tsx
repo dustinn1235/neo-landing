@@ -1,6 +1,6 @@
 const Store = () => {
   return (
-    <div className="mt-56 w-[70%]">
+    <div className="mt-48 w-[70%]">
       <div className="flex flex-col gap-4 w-full">
         <h1 className="text-[3rem] font-bold text-center">
           Your multi-tool for money
