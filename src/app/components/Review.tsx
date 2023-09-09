@@ -16,7 +16,7 @@ const Review = ({ review, active, setActive, index }: Props) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["center center", "start center"],
+    offset: ["start center", "center center"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (value) => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Loading from "./Loading";
 import Navbar from "./Navbar";
 import Mainpage from "./Mainpage";
@@ -11,9 +11,11 @@ import Store from "./Store";
 import Slogan from "./Slogan";
 import Footer from "./Footer";
 import Lenis from "@studio-freight/lenis";
+import Faq from "./Faq";
 
 const App = () => {
   const [scrollable, setScrollable] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (scrollable) {
@@ -23,6 +25,15 @@ const App = () => {
         requestAnimationFrame(raf);
       };
       requestAnimationFrame(raf);
+
+      if (!ref.current) return;
+      const resizeObserver = new ResizeObserver(() => {
+        // Do what you want to do when the size of the element changes
+        console.log(ref.current?.offsetHeight);
+        lenis.resize();
+      });
+      resizeObserver.observe(ref.current);
+      return () => resizeObserver.disconnect(); // clean up
     }
   }, [scrollable]);
 
@@ -30,6 +41,7 @@ const App = () => {
     <div
       className="font-Poppins w-full min-h-full absolute bg-black px-20 text-[#f8faf9]"
       style={{ overflowY: scrollable ? "visible" : "hidden" }}
+      ref={ref}
     >
       <Loading setScrollable={setScrollable} />
       {scrollable && (
@@ -41,6 +53,7 @@ const App = () => {
           <Clients />
           <Store />
           <Slogan />
+          <Faq />
           <Footer />
         </div>
       )}
