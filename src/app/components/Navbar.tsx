@@ -1,6 +1,6 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import MenuMobile from "./MenuMobile";
 
 const variants = {
   initial: {
@@ -33,7 +33,7 @@ const Navbar = () => {
 
   useMotionValueEvent(scrollY, "change", (v) => {
     // disable disapear nav on mobile
-    if (window.innerWidth >= 640) {
+    if (window.innerWidth >= 1024) {
       if (v - scrollY.getPrevious() < 0) {
         setAnimateState("animate");
       } else {
@@ -51,10 +51,7 @@ const Navbar = () => {
         animate={animateState}
       >
         <img src="logo.svg" className="w-auto h-fit object-contain mr-16"></img>
-
-        <div className="ml-auto text-2xl lg:hidden">
-          <GiHamburgerMenu />
-        </div>
+        <MenuMobile />
 
         <div className="max-lg:hidden flex gap-10">
           <span>Products</span>
