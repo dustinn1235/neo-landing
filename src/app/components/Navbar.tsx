@@ -32,17 +32,20 @@ const Navbar = () => {
   const [animateState, setAnimateState] = useState("first");
 
   useMotionValueEvent(scrollY, "change", (v) => {
-    if (v - scrollY.getPrevious() < 0) {
-      setAnimateState("animate");
-    } else {
-      setAnimateState("initial");
+    // disable disapear nav on mobile
+    if (window.innerWidth >= 640) {
+      if (v - scrollY.getPrevious() < 0) {
+        setAnimateState("animate");
+      } else {
+        setAnimateState("initial");
+      }
     }
   });
 
   return (
     <>
       <motion.div
-        className="w-full max-w-[90rem] h-[5rem] flex font-semibold items-center pt-4 fixed top-0 px-8 bg-black z-20"
+        className="w-full max-w-[90rem] h-[5rem] flex font-semibold items-center pt-4 fixed top-0 px-8 bg-black z-30"
         variants={variants}
         initial="initial"
         animate={animateState}

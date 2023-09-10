@@ -1,5 +1,6 @@
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useRef } from "react";
+import { AiFillCaretLeft } from "react-icons/ai";
 
 type Props = {
   review: {
@@ -38,7 +39,7 @@ const Review = ({ review, active, setActive, index }: Props) => {
             >
               {active === i && (
                 <div className="absolute left-[-70%] sm:left-[-50%]">
-                  &#9664;
+                  <AiFillCaretLeft />
                 </div>
               )}
               <img
