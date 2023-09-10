@@ -14,12 +14,12 @@ const Store = () => {
         </p>
       </div>
 
-      <div className="flex flex-col-reverse max-lg:items-center max-lg:gap-20 lg:grid lg:grid-cols-[1fr,1.3fr] mt-10 lg:mt-20">
+      <div className="flex flex-col-reverse max-lg:items-center lg:grid lg:grid-cols-[1fr,1.3fr] mt-10 lg:mt-20">
         <img
           className="w-full aspect-square max-w-[30rem] lg:aspect-[1/1.1] object-contain"
           src="store.webp"
         ></img>
-        <div className="flex flex-col justify-center items-center gap-10">
+        <div className="flex flex-col justify-center items-center gap-10 max-lg:mb-16">
           <div className="grid grid-cols-2 gap-4">
             <img
               src="appstore.svg"
