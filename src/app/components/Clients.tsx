@@ -23,7 +23,7 @@ const Clients = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="w-[70%] mt-56">
+    <div className="w-[90%] mt-56 max-w-[58rem]">
       <h1 className="tracking-widest">WHAT THEY SAID</h1>
       <div className="mt-8 flex flex-col gap-12">
         {reviews.map((review, index) => (

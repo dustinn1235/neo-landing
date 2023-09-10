@@ -2,7 +2,7 @@ import CountUp from "./CountUp";
 
 const Store = () => {
   return (
-    <div className="mt-48 w-full max-w-[60rem]">
+    <div className="mt-48 w-full max-w-[58rem]">
       <div className="flex flex-col gap-4 lg:gap-8 w-full">
         <h1 className="text-3xl md:text-[2.5rem] lg:text-[3rem] font-bold text-center">
           Your multi-tool for money

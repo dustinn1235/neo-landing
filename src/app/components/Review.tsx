@@ -27,7 +27,7 @@ const Review = ({ review, active, setActive, index }: Props) => {
     <div className="relative" ref={ref}>
       {active === index && (
         <motion.div
-          className="flex flex-col absolute right-0 h-full mt-auto mb-auto w-[5.5%] items-center justify-center gap-[8%]"
+          className="flex flex-col absolute right-0 h-full mt-auto mb-auto w-[7%] md:w-[5.5%] items-center justify-center gap-[8%]"
           layoutId="avatar"
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
@@ -37,7 +37,9 @@ const Review = ({ review, active, setActive, index }: Props) => {
               key={imgSrc}
             >
               {active === i && (
-                <div className="absolute left-[-50%]">&#9664;</div>
+                <div className="absolute left-[-70%] sm:left-[-50%]">
+                  &#9664;
+                </div>
               )}
               <img
                 className={`aspect-square rounded-full object-contain ${
@@ -53,8 +55,8 @@ const Review = ({ review, active, setActive, index }: Props) => {
 
       <div className="w-full h-[1px] bg-[#414141]"></div>
       <div className="mt-8 w-3/4 flex flex-col gap-8">
-        <p className="text-[2rem] relative">
-          <span className="text-[5rem] absolute left-[-5%] top-[-5%] text-[#e8ac24]">
+        <p className="sm:text-[1.3rem] md:text-[1.5rem] lg:text-[2rem] relative">
+          <span className="text-[2rem] lg:text-[5rem] absolute left-[-5%] top-[-5%] text-[#e8ac24]">
             &quot;
           </span>{" "}
           {review.text}
