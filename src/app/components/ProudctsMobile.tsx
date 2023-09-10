@@ -6,16 +6,16 @@ const ProudctsMobile = () => {
     <div className="lg:hidden grid gap-10 max-w-[30rem]">
       {products.map((product) => (
         <div
-          className="grid grid-rows-[0.5fr,1fr] rounded-lg overflow-hidden"
+          className="flex flex-col rounded-lg overflow-hidden"
           key={product.name}
         >
-          <div className="bg-[#989898] w-full aspect-[1.5/1]">
+          <div className="bg-[#989898] w-full aspect-[1.5/1] max-h-[15rem]">
             <img
               src={product.imgURL}
               className="w-full h-full object-contain"
             ></img>
           </div>
-          <div className="bg-[#1b1b1b] flex flex-col gap-2 pt-8 pb-5 px-5 justify-center">
+          <div className="bg-[#1b1b1b] flex flex-col gap-2 pt-10 pb-8 px-5 justify-center">
             <h1 className="text-xl font-bold">{product.name}</h1>
             <p className="font-light">{product.description}</p>
             <button className="mt-6 font-semibold w-fit px-4 py-2 bg-[#414141] rounded-full flex items-center gap-2 group justify-center hover:bg-[#f8faf9]">
