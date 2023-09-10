@@ -21,8 +21,8 @@ const Faq = () => {
   const [active, setActive] = useState([false, false, false]);
 
   return (
-    <div className="mt-36 w-[70%] grid grid-cols-2 gap-[3rem]">
-      <h1 className="text-3xl leading-normal">
+    <div className="mt-36 w-full max-w-[30rem] lg:max-w-[58rem] lg:grid lg:grid-cols-2 gap-[3rem]">
+      <h1 className="text-2xl max-lg:mb-10 sm:text-3xl leading-normal">
         Got questions? We can answer them.
       </h1>
       <div className="flex flex-col gap-7">
@@ -32,7 +32,7 @@ const Faq = () => {
             key={faq.question}
           >
             <button
-              className="text-lg font-semibold w-full flex items-center"
+              className="sm:text-lg font-semibold w-full flex items-center"
               onClick={() => {
                 setActive((prev) => {
                   prev[i] = !prev[i];
@@ -63,7 +63,7 @@ const Faq = () => {
               animate={active[i] ? "animate" : "initial"}
               className="overflow-hidden"
             >
-              <p className="font-light whitespace-pre-wrap pt-5">
+              <p className="max-sm:text-sm font-light whitespace-pre-wrap pt-5">
                 {faq.answer}
               </p>
             </motion.div>
