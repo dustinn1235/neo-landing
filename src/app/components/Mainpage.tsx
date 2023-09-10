@@ -76,7 +76,7 @@ const Mainpage = () => {
 
   return (
     <>
-      <div className="w-[100%] max-w-[58rem] pt-[7rem] md:pt-[9rem] lg:pt-[7rem] xl:pt-[4rem] 2xl:pt-0 min-h-screen flex justify-center items-center">
+      <div className="w-[100%] max-w-[58rem] pt-[10rem] md:pt-[9rem] lg:pt-[7rem] xl:pt-[4rem] 2xl:pt-0 min-h-screen flex justify-center items-center">
         <div className="flex flex-col lg:grid lg:grid-cols-[1.8fr,1fr] items-center gap-20">
           <motion.div
             className="flex flex-col gap-6"
