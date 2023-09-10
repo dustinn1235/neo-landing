@@ -31,18 +31,18 @@ const Store = () => {
             ></img>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 text-xl">
+          <div className="grid grid-cols-3 gap-2 w-full text-xl">
             <div className="flex flex-col items-center">
               <CountUp end={4.8} decimals={1} suffix="&#9733;" />
-              <p className="max-sm:text-sm">On the app store</p>
+              <p className="max-sm:text-xs">On the app store</p>
             </div>
             <div className="flex flex-col items-center">
               <CountUp end={750} suffix="+" />
-              <p className="max-sm:text-sm">Employees</p>
+              <p className="max-sm:text-xs">Employees</p>
             </div>
             <div className="flex flex-col items-center">
               <CountUp end={299} prefix="$" />
-              <p className="max-sm:text-sm">Million raised</p>
+              <p className="max-sm:text-xs">Million raised</p>
             </div>
           </div>
         </div>
