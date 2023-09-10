@@ -20,10 +20,10 @@ const Slogan = () => {
         style={{ translateY }}
       ></motion.img>
 
-      <p className="text-3xl">
+      <p className="px-10 text-[min(1.875rem,6vw)] text-center">
         Start getting the financial experience you deserve
       </p>
-      <button className="text-2xl bg-white rounded-full bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 px-8 py-4 hover:bg-opacity-100 transition-all duration-200 group">
+      <button className="text-[min(1.5rem,5vw)] bg-white rounded-full bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 px-8 py-4 hover:bg-opacity-100 transition-all duration-200 group">
         <span className="relative z-10 group-hover:mix-blend-exclusion">
           JOIN NOW
         </span>
