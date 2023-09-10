@@ -56,10 +56,10 @@ const App = () => {
           <Products />
           <About />
           <Store />
-          {/* <Clients />
+          <Clients />
           <Slogan />
           <Faq />
-          <Footer /> */}
+          <Footer />
         </div>
       )}
     </div>
