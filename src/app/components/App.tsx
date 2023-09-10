@@ -12,6 +12,7 @@ import Slogan from "./Slogan";
 import Footer from "./Footer";
 import Lenis from "@studio-freight/lenis";
 import Faq from "./Faq";
+import Founders from "./Founders";
 
 const App = () => {
   const [scrollable, setScrollable] = useState(false);
@@ -57,6 +58,7 @@ const App = () => {
           <About />
           <Store />
           <Clients />
+          {/* <Founders /> */}
           <Slogan />
           <Faq />
           <Footer />
