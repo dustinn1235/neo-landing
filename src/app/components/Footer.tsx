@@ -6,7 +6,10 @@ const Footer = () => {
   return (
     <div>
       <div className="flex flex-col gap-10 justify-center mt-40 pb-[5rem]">
-        <img src="logo.svg" className="w-auto h-fit object-contain"></img>
+        <img
+          src="logo.svg"
+          className="w-full aspect-[3.5/1] object-contain"
+        ></img>
         <div className="flex text-[2rem] gap-6">
           <BsTwitter />
           <BiLogoFacebook />

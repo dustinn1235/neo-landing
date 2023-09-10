@@ -55,7 +55,7 @@ const Loading = ({ setScrollable }: Props) => {
           >
             <motion.img
               src="logo.svg"
-              className="w-full object-contain scale-125"
+              className="w-full object-contain"
               variants={word}
             ></motion.img>
 
