@@ -17,7 +17,7 @@ const Founders = () => {
       </div>
       <div className="flex flex-col gap-20 lg:gap-32 w-full max-w-[40rem]">
         {founders.map((founder) => (
-          <Founder founder={founder} />
+          <Founder founder={founder} key={founder.name} />
         ))}
       </div>
     </div>
