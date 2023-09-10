@@ -47,20 +47,22 @@ const Mainpage = () => {
   const THRESHOLD = 20;
 
   useEffect(() => {
-    ref.current &&
+    window.innerWidth >= 640 &&
+      ref.current &&
       setMousePos(
         `perspective(${ref.current.clientWidth}px) rotateX(-3deg) rotateY(-7deg) scale(1.1)`
       );
   }, [ref]);
 
   const handleMouseLeave = (e: any) => {
-    setMousePos(
-      `perspective(${e.currentTarget.clientWidth}px) rotateX(-3deg) rotateY(-7deg) scale(1.1)`
-    );
+    window.innerWidth >= 640 &&
+      setMousePos(
+        `perspective(${e.currentTarget.clientWidth}px) rotateX(-3deg) rotateY(-7deg) scale(1.1)`
+      );
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (ref.current) {
+    if (ref.current && window.innerWidth >= 640) {
       const { clientX, clientY } = e;
       const { clientWidth, clientHeight, offsetLeft, offsetTop } = ref.current;
 
