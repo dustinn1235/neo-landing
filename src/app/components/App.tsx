@@ -55,8 +55,8 @@ const App = () => {
           <Mainpage />
           <Products />
           <About />
-          {/* <Store />
-          <Clients />
+          <Store />
+          {/* <Clients />
           <Slogan />
           <Faq />
           <Footer /> */}
