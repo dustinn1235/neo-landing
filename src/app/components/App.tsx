@@ -55,11 +55,11 @@ const App = () => {
           <Mainpage />
           <Products />
           <About />
-          <Store />
+          {/* <Store />
           <Clients />
           <Slogan />
           <Faq />
-          <Footer />
+          <Footer /> */}
         </div>
       )}
     </div>

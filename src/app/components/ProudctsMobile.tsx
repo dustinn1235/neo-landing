@@ -5,7 +5,10 @@ const ProudctsMobile = () => {
   return (
     <div className="lg:hidden grid gap-10 max-w-[30rem]">
       {products.map((product) => (
-        <div className="grid grid-rows-[0.5fr,1fr] rounded-lg overflow-hidden">
+        <div
+          className="grid grid-rows-[0.5fr,1fr] rounded-lg overflow-hidden"
+          key={product.name}
+        >
           <div className="bg-[#989898] w-full aspect-[1.5/1]">
             <img
               src={product.imgURL}

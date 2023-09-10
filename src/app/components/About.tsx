@@ -11,9 +11,9 @@ const About = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
 
   return (
-    <div className="w-[70%] mt-60 flex flex-col items-center gap-8">
-      <div className="flex flex-col gap-5 items-center w-[90%]">
-        <h1 className="text-[2rem] font-bold">
+    <div className="w-full mt-44 lg:mt-60 flex flex-col items-center gap-8">
+      <div className="flex flex-col gap-5 items-center max-w-[40rem] lg:max-w-[52rem]">
+        <h1 className="text-3xl text-center lg:text-[2rem] font-bold">
           What if the future of banking wasn’t a bank?
         </h1>
         <p className="text-center leading-relaxed">
