@@ -52,12 +52,12 @@ const App = () => {
       <Loading setScrollable={setScrollable} />
       {scrollable && (
         <div className="w-full h-full flex flex-col items-center">
-          {/* <Navbar />
+          <Navbar />
           <Mainpage />
           <Products />
           <About />
           <Store />
-          <Clients /> */}
+          <Clients />
           <Founders />
           <Slogan />
           <Faq />

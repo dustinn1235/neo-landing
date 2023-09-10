@@ -1,4 +1,5 @@
 import Founder from "./Founder";
+import { founders } from "../utils/people";
 
 const Founders = () => {
   return (
@@ -14,8 +15,10 @@ const Founders = () => {
           experience for Canadians.
         </p>
       </div>
-      <div>
-        <Founder />
+      <div className="flex flex-col gap-20 lg:gap-32 w-full max-w-[40rem]">
+        {founders.map((founder) => (
+          <Founder founder={founder} />
+        ))}
       </div>
     </div>
   );
