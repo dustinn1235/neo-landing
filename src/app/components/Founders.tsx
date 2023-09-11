@@ -3,7 +3,7 @@ import { founders } from "../utils/people";
 
 const Founders = () => {
   return (
-    <div className="w-full mt-44 lg:mt-60 flex flex-col items-center gap-20">
+    <div className="w-full mt-44 lg:mt-60 flex flex-col items-center gap-36">
       <div className="flex flex-col gap-8 items-center max-w-[40rem] lg:max-w-[52rem]">
         <h1 className="text-3xl md:text-[2.5rem] lg:text-[3rem] font-bold text-center">
           Meet the founders

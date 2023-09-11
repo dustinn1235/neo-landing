@@ -34,7 +34,7 @@ const Founder = ({ founder }: Props) => {
 
   return (
     <div
-      className={`flex flex-col gap-3 relative w-fit max-lg:self-center self-${founder.pos}`}
+      className={`flex flex-col gap-3 relative w-fit max-lg:self-center max-xl:self-start self-${founder.pos}`}
     >
       <h1 className="text-sm text-[#ffffffad]">{founder.title}</h1>
       <span className="text-4xl leading-none">{founder.name}</span>
@@ -46,15 +46,12 @@ const Founder = ({ founder }: Props) => {
       </div>
       <FounderBtn setActive={setActive} active={active} />
       <motion.p
-        className="max-lg:hidden absolute left-[115%] top-[75%] text-sm w-[15rem] text-[#ffffffad]"
+        className="max-lg:hidden absolute left-[115%] top-[70%] text-xs leading-relaxed w-[25rem] text-[#ffffffad]"
         variants={variants}
         initial="initial"
         animate={active ? "animate" : "initial"}
       >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
-        inventore dicta? Cumque ex esse praesentium quisquam veniam animi ea
-        alias, quis maxime! Cum praesentium ab laborum quidem voluptate, quia
-        suscipit.
+        {founder.description}
       </motion.p>
     </div>
   );
